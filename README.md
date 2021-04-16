@@ -11,10 +11,4 @@ If all the colors provided by the user is valid then the steps to solve the rubi
 ![rubiks_cube](https://user-images.githubusercontent.com/80764759/114990337-0af50b80-9eb6-11eb-8aad-db2ce8ef506b.jpg)
 
 
-[![C/C++ CI](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/c_build.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/c_build.yml)
-
-[![Unit testing](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/unit-test.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/unit-test.yml)
-
-[![Valgrind](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/Valgrind.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/Valgrind.yml)
-
-[![cppcheck-action](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/cppcheck-action.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/cppcheck-action.yml)
+[![C/C++ CI](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/c_build.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/c_build.yml)   [![Unit testing](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/unit-test.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/unit-test.yml)   [![Valgrind](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/Valgrind.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/Valgrind.yml)    [![cppcheck-action](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/cppcheck-action.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/cppcheck-action.yml)
