@@ -103,10 +103,10 @@
         }//whileMain
     }
     
-    boolean alignCenter(){
+    void alignCenter(){
         
         printf("\nx--------x--------x--------x----------x-------x---------x----------x\n");
         align();
         printf("____________________________________________________________________\n");
-        return true;
+     
     }

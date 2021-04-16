@@ -2,7 +2,7 @@
 #include <string.h>
 #include "solve_cube.h"
     
-boolean solveAll(){
+void solveAll(){
 
     printf("\n************************************PLUS_BOTTOM****************************************S\n");
     plusBottom();
@@ -42,5 +42,4 @@ boolean solveAll(){
 
     freeSpace();
 
-    return true;
 }

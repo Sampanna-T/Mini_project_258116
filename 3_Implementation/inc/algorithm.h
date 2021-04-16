@@ -27,30 +27,30 @@
  *  This algorithm is used to solve a corner piece while solving layer1
  *  and also used to solve a corner piece at the end
  */
-boolean L(boolean direction, boolean print, int count);
+void L(boolean direction, boolean print, int count);
 
 /**
  * @brief 
  * This algorithm is used to solve the second layer of rubik's cube 
  */
-boolean layer2(boolean direction, boolean print, int count);
+void layer2(boolean direction, boolean print, int count);
 
 /**
  * @brief 
  * This algorithm is used to create a plus mark at the top
  */
-boolean twistFront(boolean direction, boolean print, int count);
+void twistFront(boolean direction, boolean print, int count);
 
 /**
  * @brief 
  * This algorithm is used to solve the center pieces of the top layer
  */
-boolean upTwist(boolean direction, boolean print, int count);
+void upTwist(boolean direction, boolean print, int count);
 
 /**
  * @brief 
  * This algorithm is used to solve the corner pieces of the top layer 
  */
-boolean corner(boolean direction, boolean print, int count);
+void corner(boolean direction, boolean print, int count);
 
 #endif

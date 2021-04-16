@@ -102,7 +102,7 @@ void rotateSideColors(int i, boolean direction)
     setColorAt(i, 0, 0, LEFT, side_color[11]);
 }
 
-boolean rotateFront(boolean direction, boolean print, int count, int subcount)
+void rotateFront(boolean direction, boolean print, int count, int subcount)
 {
 
     rotateFaceColors(0, direction);
@@ -116,10 +116,9 @@ boolean rotateFront(boolean direction, boolean print, int count, int subcount)
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"anti-clkwise");
         }
     }//if(print == true)
-    return true;
 }
 
-boolean rotateMiddle(boolean direction, boolean print, int count, int subcount)
+void rotateMiddle(boolean direction, boolean print, int count, int subcount)
 {
 
     rotateSideColors(1, direction);
@@ -132,10 +131,10 @@ boolean rotateMiddle(boolean direction, boolean print, int count, int subcount)
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"anti-clkwise");
         }
     }//if(print == true)
-    return true;
+
 }
 
-boolean rotateBack(boolean direction, boolean print, int count, int subcount)
+void rotateBack(boolean direction, boolean print, int count, int subcount)
 {
 
     rotateFaceColors(2, direction);
@@ -149,7 +148,7 @@ boolean rotateBack(boolean direction, boolean print, int count, int subcount)
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"anti-clkwise");
         }
     }//if(print == true)
-    return true;
+
 }
 
 /**************************************************************************************************************/
@@ -254,7 +253,7 @@ void rotateHorizontalSideColors(int j, boolean direction)
     setColorAt(0,j,0, LEFT, side_color[11]);
 }
 
-boolean upHorizontal(boolean direction, boolean print, int count, int subcount){
+void upHorizontal(boolean direction, boolean print, int count, int subcount){
     rotateHorizontalFaceColors(0,direction);
     rotateHorizontalSideColors(0,direction);
 
@@ -266,10 +265,10 @@ boolean upHorizontal(boolean direction, boolean print, int count, int subcount){
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"left-side");
         }
     }//if(print == true)
-    return true;
+   
 }
 
-boolean middleHorizontal(boolean direction, boolean print, int count, int subcount){
+void middleHorizontal(boolean direction, boolean print, int count, int subcount){
     rotateHorizontalSideColors(1,direction);
 
     if(print == true){//if(print == true)
@@ -280,10 +279,10 @@ boolean middleHorizontal(boolean direction, boolean print, int count, int subcou
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"left-side");
         }
     }//if(print == true)
-    return true;
+ 
 }
 
-boolean downHorizontal(boolean direction, boolean print, int count, int subcount){
+void downHorizontal(boolean direction, boolean print, int count, int subcount){
     rotateHorizontalFaceColors(2,direction);
     rotateHorizontalSideColors(2,direction);
 
@@ -295,7 +294,7 @@ boolean downHorizontal(boolean direction, boolean print, int count, int subcount
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"left-side");
         }
     }//if(print == true)
-    return true;
+ 
 }
 
 /**************************************************************************************************************/
@@ -400,7 +399,7 @@ void rotateVerticalSideColors(int k, boolean direction)
     setColorAt(0,0,k,FRONT, side_color[11]);
 }
 
-boolean leftVertical(boolean direction, boolean print, int count, int subcount){
+void leftVertical(boolean direction, boolean print, int count, int subcount){
     rotateVerticalFaceColors(0,direction);
     rotateVerticalSideColors(0,direction);
 
@@ -412,10 +411,10 @@ boolean leftVertical(boolean direction, boolean print, int count, int subcount){
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"down-side");
         }
     }//if(print == true)
-    return true;
+
 }
 
-boolean middleVertical(boolean direction, boolean print, int count, int subcount){
+void middleVertical(boolean direction, boolean print, int count, int subcount){
     rotateVerticalSideColors(1,direction);
 
     if(print == true){//if(print == true)
@@ -426,10 +425,10 @@ boolean middleVertical(boolean direction, boolean print, int count, int subcount
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"down-side");
         }
     }//if(print == true)
-    return true;
+   
 }
 
-boolean rightVertical(boolean direction, boolean print, int count, int subcount){
+void rightVertical(boolean direction, boolean print, int count, int subcount){
     rotateVerticalFaceColors(2,direction);
     rotateVerticalSideColors(2,direction);
 
@@ -441,11 +440,11 @@ boolean rightVertical(boolean direction, boolean print, int count, int subcount)
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"down-side");
         }
     }//if(print == true)
-    return true;
+
 }
 
 
-boolean circleHorizontal(boolean direction, boolean print, int count ,int subcount){
+void circleHorizontal(boolean direction, boolean print, int count ,int subcount){
     upHorizontal(direction,false,count,subcount);
     middleHorizontal(direction,false,count,subcount);
     downHorizontal(direction,false,count,subcount);
@@ -457,11 +456,11 @@ boolean circleHorizontal(boolean direction, boolean print, int count ,int subcou
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"left-side");
         }
     }//if(print == true)
-    return true;
+
 }
 
 
-boolean circleVertical(boolean direction, boolean print, int count ,int subcount){
+void circleVertical(boolean direction, boolean print, int count ,int subcount){
     leftVertical(direction,false,count,subcount);
     middleVertical(direction,false,count,subcount);
     rightVertical(direction,false,count,subcount);
@@ -474,7 +473,4 @@ boolean circleVertical(boolean direction, boolean print, int count ,int subcount
             printf("%d%c]%s(%s)\n",count,subcount,__func__,"down-side");
         }
     }//if(print == true)
-
-
-    return true;
 }

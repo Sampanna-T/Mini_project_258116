@@ -57,13 +57,6 @@ int size;
 char *(color[3]);
 }Node;
 
-/**
- * @brief 
- *  move variable represents what action(ex:up_horizontal) is performed on 
- *  rubik's cube at present.
- */
-char move[30];
- 
 
 /**
  * @brief 
@@ -71,6 +64,34 @@ char move[30];
  */
 Node piece[DIMENSION][DIMENSION][DIMENSION];
 
+/**
+ * @brief 
+ * checks if the values i,j,k provided are valid or not
+ * @param i 
+ * @param j 
+ * @param k 
+ * @return boolean 
+ */
+boolean is_i_j_k_valid(int i, int j, int k);
+
+/**
+ * @brief 
+ * checks if the index is valid for given i,j,k value
+ * @param i 
+ * @param j 
+ * @param k 
+ * @param index 
+ * @return boolean 
+ */
+boolean isIndexValid(int i, int j, int k, int index);
+
+/**
+ * @brief 
+ * checks is the position given is valid or not
+ * @param position 
+ * @return boolean 
+ */
+boolean isPositionValid(char* position);
 
 /**
  * @brief 
@@ -207,17 +228,17 @@ void setColorAt(int i, int j, int k, char* position, char* color);
  * (a)if direction=true rotation takes place in clockwise direction
  * (b)if direction=false rotation takes place in anti-clockwise direction
  */
-boolean rotateFront(boolean direction, boolean print, int count, int subcount);
+void rotateFront(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs rotate operation of the middle layer
  */
-boolean rotateMiddle(boolean direction, boolean print, int count, int subcount);
+void rotateMiddle(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs rotate operation of the back layer
  */
-boolean rotateBack(boolean direction, boolean print, int count, int subcount);
+void rotateBack(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs horizontal operation on upper layer
@@ -225,17 +246,17 @@ boolean rotateBack(boolean direction, boolean print, int count, int subcount);
  * (a)if direction=true, horizontal operation takes place in the right direction
  * (b)if direction=false, horizontal operation takes place in the left direction
  */
-boolean upHorizontal(boolean direction, boolean print, int count, int subcount);
+void upHorizontal(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs horizontal operation on middle layer
  */
-boolean middleHorizontal(boolean direction, boolean print, int count, int subcount);
+void middleHorizontal(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs horizontal operation on bottom layer
  */
-boolean downHorizontal(boolean direction, boolean print, int count, int subcount);
+void downHorizontal(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs vertical operation on left layer
@@ -243,17 +264,17 @@ boolean downHorizontal(boolean direction, boolean print, int count, int subcount
  * (a)if direction=true, vertical operation takes place in the upward direction
  * (b)if direction=false, vertical operation takes place in the downward direction
  */
-boolean leftVertical(boolean direction, boolean print, int count, int subcount);
+void leftVertical(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs vertical operation on middle layer
  */
-boolean middleVertical(boolean direction, boolean print, int count, int subcount);
+void middleVertical(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs vertical operation on right layer
  */
-boolean rightVertical(boolean direction, boolean print, int count, int subcount);
+void rightVertical(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs horizontal movement on the entire body of rubik's cube
@@ -261,7 +282,7 @@ boolean rightVertical(boolean direction, boolean print, int count, int subcount)
  * (a)if direction=true, vertical operation takes place in the right direction
  * (b)if direction=false, vertical operation takes place in the left direction
  */
-boolean circleHorizontal(boolean direction, boolean print, int count, int subcount);
+void circleHorizontal(boolean direction, boolean print, int count, int subcount);
 
 /**
  * @brief performs vertical movement on the entire body of rubik's cube
@@ -269,10 +290,28 @@ boolean circleHorizontal(boolean direction, boolean print, int count, int subcou
  * (a)if direction=true, vertical operation takes place in the downward direction
  * (b)if direction=false, vertical operation takes place in the upward direction
  */
-boolean circleVertical(boolean direction, boolean print, int count, int subcount);
+void circleVertical(boolean direction, boolean print, int count, int subcount);
 
 //
 
+/**
+ * @brief checks if all the Node colors entered by user is valid or not and returns accordingly
+ * 
+ * @return boolean 
+ */
+boolean isNodeValid();
+
+/**
+ * @brief checks if all the colors of the rubik's cube are valid or not
+ * 
+ * @return boolean 
+ */
+boolean isRubiksCubeValid();
+
+/**
+ * @brief initializes the rubik's cube with user entered colors
+ * 
+ */
 void setRubixCube();
 
 /**
@@ -292,6 +331,13 @@ void setRubixCubeAtOnce(char input[600]);
  * @return boolean 
  */
 void display();
+
+/**
+ * @brief 
+ * used to display colors in space separated format which is easy for testing
+ * 
+ */
+void displayTest();
 
 /**
  * @brief 

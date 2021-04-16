@@ -156,7 +156,7 @@ void finalStep1(char* downColor){
 }
 
 
-boolean plusBottom(){
+void plusBottom(){
     char* downColor=getDownMidColor();
         printf("________________________________________________\n\n");
         solveColorUp(downColor);
@@ -176,7 +176,6 @@ boolean plusBottom(){
         
         printf("________________________________________________\n\n");
 
-        return true;
 }
 
 

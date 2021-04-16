@@ -135,10 +135,10 @@
 
     }
     
-    boolean cornerAlign(){
+    void cornerAlign(){
         
         printf("\nx--------x--------x--------x----------x-------x---------x----------x\n");
         solveCorner();
         printf("___________________________________________________________________\n");
-        return true;
+    
     }

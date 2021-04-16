@@ -2,7 +2,8 @@
 #include <string.h>
 #include "algorithm.h"
 
-boolean L(boolean direction, boolean print, int count){
+//performs L algorithm
+void L(boolean direction, boolean print, int count){
     if(direction){
         rightVertical(false,print,count,'a');
         downHorizontal(false,print,count,'b');
@@ -15,10 +16,10 @@ boolean L(boolean direction, boolean print, int count){
         leftVertical(true,print,count,'c');
         downHorizontal(false,print,count,'d');
     }
-    return true;
 }
 
-boolean layer2(boolean direction, boolean print, int count){
+//performs layer2 algorithm
+void layer2(boolean direction, boolean print, int count){
 
     if(direction){
         upHorizontal(false,print,count,'a');
@@ -40,10 +41,10 @@ boolean layer2(boolean direction, boolean print, int count){
         upHorizontal(true,print,count,'g');
         rotateFront(false,print,count,'h');
     }
-    return true;
 }
 
-boolean twistFront(boolean direction, boolean print, int count){
+//performs twistFront algorithm
+void twistFront(boolean direction, boolean print, int count){
 
     if(direction){
         rotateFront(true,print,count,'a');
@@ -61,11 +62,10 @@ boolean twistFront(boolean direction, boolean print, int count){
         upHorizontal(false,print,count,'e');
         rotateFront(true,print,count,'f');
     }
-
-    return true;
 }
 
-boolean upTwist(boolean direction, boolean print, int count){
+//performs upTwist algorithm
+void upTwist(boolean direction, boolean print, int count){
     
     if(direction){
         rightVertical(true,print,count,'a');
@@ -88,10 +88,10 @@ boolean upTwist(boolean direction, boolean print, int count){
         leftVertical(false,print,count,'h');
     }
     
-    return true;
 }
 
-boolean corner(boolean direction, boolean print, int count){
+//performs corner algorithm
+void corner(boolean direction, boolean print, int count){
 
     if(direction){
         upHorizontal(false,print,count,'a');
@@ -113,5 +113,4 @@ boolean corner(boolean direction, boolean print, int count){
         upHorizontal(false,print,count,'g');
         rightVertical(false,print,count,'h');
     }
-    return true;
 }

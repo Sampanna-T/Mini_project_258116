@@ -13,49 +13,49 @@
   * @brief 
   * cretes a plus mark at the bottom
   */
- boolean plusBottom();
+ void plusBottom();
 
  
  /**
   * @brief 
   * completes the first layer
   */   
- boolean layerFirst();
+ void layerFirst();
     
  /**
   * @brief 
   * completes the second layer if first layer is complete
   */   
- boolean layerSecond();
+ void layerSecond();
 
  /**
   * @brief 
   * cretes a plus mark at the top after solving first and second layer
   */
- boolean plusTop();
+ void plusTop();
     
  /**
   * @brief 
   * aligns all the centers of the top layer
   */
- boolean alignCenter();
+ void alignCenter();
     
  /**
   * @brief 
   * positions the corner pieces(at the top) at the right location
   */
- boolean cornerAlign();
+ void cornerAlign();
 
  /**
   * @brief 
   * solves the corner pieces which are aligned using corner() function
   */
- boolean layerThird();
+ void layerThird();
     
  /**
   * @brief 
   * performs all the operations specified above
   */
- boolean solveAll();
+ void solveAll();
     
 #endif

@@ -2,6 +2,7 @@
 #include <string.h>
 #include "solve_cube.h"
 
+//checks whether the piece is at position 0,0,2 or not
 boolean topFlag = false;
   //checks whether corner piece is valid or not
     boolean isCornerValid(int i, int j, int k){
@@ -135,12 +136,12 @@ boolean topFlag = false;
         } //for
     }
     
-    boolean layerFirst(){
+    void layerFirst(){
         printf("\nx--------x--------x--------x----------x-------x---------x----------x\n");
         finalStep2(getUpMidColor());
         printf("________________________________________________\n\n");
         circleVertical(false,true,++count,' ');
         circleVertical(false,true,++count,' '); 
         printf("________________________________________________\n\n");
-        return true;
+
     }

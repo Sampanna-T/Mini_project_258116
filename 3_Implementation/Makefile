@@ -21,8 +21,19 @@ src/solve_all.c
 
 
 # All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c\
+TEST_SRC = src/algorithm.c\
+src/align_center.c\
+src/corner_solve.c\
+src/get_set_functions.c\
+src/initialize.c\
+src/layer_first.c\
+src/layer_second.c\
+src/layer_third.c\
+src/operations.c\
+src/plus_bottom.c\
+src/plus_top.c\
+src/solve_all.c\
+test/test_rubiks_cube.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
@@ -60,7 +71,7 @@ doc:
 
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
 # Remove all the built files, invoke by `make clean`

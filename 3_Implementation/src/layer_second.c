@@ -118,13 +118,13 @@
         }//whileMain
     }
     
-    boolean layerSecond(){
+    void layerSecond(){
         
         printf("\nx--------x--------x--------x----------x-------x---------x----------x\n");
         solveUpEdgePieces();
         printf("\n------------------------------------------------\n");
         solveMiddleEdgePieces();
         printf("________________________________________________\n");
-        return true;
+
     }
     
