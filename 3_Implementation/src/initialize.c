@@ -117,12 +117,14 @@ printf("Enter the colours of rubix cube one at a time when asked(MAX CHARACTERS=
         }//for j
     }//for i
 
-    /*if(isNodeValid){
-        printf("\nALL NODES ENTERED ARE VALID\n");
+    if(isNodeValid && isRubiksCubeValid){
+        printf("\nALL COLORS ENTERED ARE VALID\n");
     }
     else{
         printf("\nALL NODES ENTERED ARE NOT VALID\n");
-    }*/
+        printf("Enter colors again");
+        setRubixCube();
+    }
 
  printf("********************************************************************************************\n\n");
 
