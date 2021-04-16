@@ -12,3 +12,9 @@ If all the colors provided by the user is valid then the steps to solve the rubi
 
 
 [![C/C++ CI](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/c_build.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/c_build.yml)
+
+[![Unit testing](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/unit-test.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/unit-test.yml)
+
+[![Valgrind](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/Valgrind.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/Valgrind.yml)
+
+[![cppcheck-action](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/cppcheck-action.yml/badge.svg)](https://github.com/Sampanna-T/Mini_project_258116/actions/workflows/cppcheck-action.yml)
